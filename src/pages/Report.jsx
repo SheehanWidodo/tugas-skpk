@@ -109,8 +109,7 @@ function Report() {
                                 header.map((column,index)=>(
                                     index === 0 ? null :
                                     <td key={index}
-                                        className={['px-4 py-2',index === 1 ?'w-28 sticky left-0 z-20 truncate overflow-hidden whitespace-nowrap border-r-2' : 'w-4 text-center',index_baris%2 === 0 ? "bg-gray-50" : "bg-white"].join(" ")}
-                                        title={baris[column]}>
+                                        className={['px-4 py-2',index === 1 ?'w-28 sticky left-0 z-20 truncate overflow-hidden whitespace-nowrap border-r-2' : 'w-4 text-center',index_baris%2 === 0 ? "bg-gray-50" : "bg-white"].join(" ")}>
                                             { column === "NAMA SISWA" || column === "NO" ? baris[column] : baris[column] > 75 ? "✅" : baris[column] == "" ? "-" : "❌"}               
                                     </td>
                                 ))
