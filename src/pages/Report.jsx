@@ -175,7 +175,6 @@ function Report() {
                             </div>
                             <h2 className="text-lg font-bold my-2 px-2">{popupContent.title}</h2>
                             <p className="text-gray-600 mb-4 px-2">{popupContent.content==""?"-":popupContent.content}</p>
-                            
                         </div>
                     </div>
                 )}
