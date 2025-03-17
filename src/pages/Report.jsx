@@ -91,7 +91,7 @@ function Report() {
                             <th key={index}
                                 title={header_exp[column]}
                                 onClick={()=>openPopUp(column, header_exp[column])}
-                                className={['px-4 py-2 sticky top-0 bg-gray-100 cursor-pointer',index === 1 ? 'w-28 z-30 left-0 border-r-2' : 'w-4 text-center'].join(" ")}>
+                                className={['px-4 py-2 sticky top-0 bg-gray-100 cursor-pointer',index === 1 ? 'w-30 z-30 left-0 border-r-2' : 'w-4 text-center'].join(" ")}>
                                 {column}                        
                             </th>
                         ))}
@@ -107,9 +107,10 @@ function Report() {
                             <tr key={index_baris} className={index_baris%2 === 0 ? "bg-gray-50" : ""}>
                             { 
                                 header.map((column,index)=>(
+                                index === 0 ? null :
                                 <td key={index}
-                                    className={['px-4 py-2',index === 0 ?'w-28 sticky left-0 z-20 truncate overflow-hidden whitespace-nowrap border-r-2' : 'w-4 text-center',index_baris%2 === 0 ? "bg-gray-50" : "bg-white"].join(" ")}>
-                                        { column === "NAMA SISWA" || column === "NO" ? baris[column] : baris[column] > 75 ? "✅" : baris[column] == "" ? "-" : "❌"}               
+                                    className={['px-4 py-2',index === 1 ?'w-28 sticky left-0 z-20 truncate overflow-hidden whitespace-nowrap border-r-2' : 'w-4 text-center',index_baris%2 === 0 ? "bg-gray-50" : "bg-white"].join(" ")}>
+                                        { column === "NAMA SISWA" || column === "NO" ? baris[column] : baris[column] >= 75 ? "✅" : baris[column] == "" ? "-" : "❌"}               
                                 </td>
                                 ))
                             }
