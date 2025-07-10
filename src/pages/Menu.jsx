@@ -56,6 +56,7 @@ function Menu() {
     const [loading, setLoading] = useState(false)
 
     function handleClick (data) {
+        
         setSelectedClass({
             "LINK":classes[ data["KELAS"] ],
             "KELAS":data["KELAS"]

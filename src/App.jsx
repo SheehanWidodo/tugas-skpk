@@ -11,9 +11,9 @@ function App() {
     <AppProvider>
       <Router>
         <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route path='/subject/:sub' element={<Menu />} />
-          <Route path='/subject/:sub/report/:id' element={<Report />} />
+          <Route exact path='/' element={<Report />} />
+          {/* <Route path='/subject/:sub' element={<Menu />} />
+          <Route path='/subject/:sub/report/:id' element={<Report />} /> */}
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>
