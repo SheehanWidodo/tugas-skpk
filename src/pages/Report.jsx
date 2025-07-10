@@ -164,7 +164,8 @@ function Report() {
               className="p-2 border w-full rounded truncate text-ellipsis overflow-hidden whitespace-nowrap"
             >
               <option value="" disabled>--Select Subject--</option>
-              {dataMapel.map((m, idx) => (
+              { dataMapel.length === 0 ? <option value="" disabled className="text-xs text-blue-800">Loading...</option>:
+              dataMapel.map((m, idx) => (
                 <option key={idx} value={idx}>{m}</option>
               ))}
             </select>
@@ -177,7 +178,8 @@ function Report() {
               className="p-2 border w-full rounded"
             >
               <option value="" disabled>--Select Class--</option>
-              {dataKelas.map((k, idx) => (
+              { dataKelas.length === 0 ? <option value="" disabled className="text-xs text-blue-800">Loading...</option>:
+              dataKelas.map((k, idx) => (
                 <option key={idx} value={idx}>{k}</option>
               ))}
             </select>
